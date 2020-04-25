@@ -1,1 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Name: Copywork - Style Guide
+ Author: RFrancisco
+ Email: rfrancisco@blastasia.com
+ Inspo: Non-profit Style Tile Design by Jen Bancino
+ File: sass
+ Version: 1.0.0 */
+    
+/* See Assets > Styles for Main Stylesheet */
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+    @import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+    @include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+  $copywork-app-primary: mat-palette($mat-indigo);
+  $copywork-app-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+    $copywork-app-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+  $copywork-app-theme: mat-light-theme($copywork-app-primary, $copywork-app-accent, $copywork-app-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+  @include angular-material-theme($copywork-app-theme);
+
+@font-face {
+    font-family:"Open Sans", sans-serif;
+    font-family:"Source Sans Pro", sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Source+Sans+Pro&display=swap');
+  }
+
+
+html, body { 
+    height: 100vh; 
+    overflow: hidden;
+    background:#C1D5E2 !important;
+    // Typeface/Fonts
+    .headfont   { font-family: "Source Sans Pro", sans-serif; }
+    .bodytext   { font-family: "Open Sans", sans-serif; } }
+
+html { margin: 1%}
+body { margin: 0; border-radius: 25px;}

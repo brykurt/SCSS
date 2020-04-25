@@ -1,0 +1,16 @@
+@import '../assets/styles/variables';
+@import '../assets/styles/app';
+@import '../assets/icons/line-awesome/css/line-awesome.css';
+
+
+.button-colmun {
+    margin-left: -50px;
+    margin-right: 40px;
+    padding-right: 20px;
+}
+
+.checkbox.mat-checkbox-frame {
+    border-color: white !important
+}
+
+body {background:#C1D5E2 !important;}

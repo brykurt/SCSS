@@ -1,0 +1,101 @@
+/* 
+ Name: Copywork - Style Guide
+ Author: RFrancisco
+ Email: rfrancisco@blastasia.com
+ Inspo: Non-profit Style Tile Design by Jen Bancino
+ File: sass/scss
+ Version: 1.0.0 
+*/
+
+/*
+    TABLE OF CONTENTS
+    A. Variables
+        1. Fonts
+        2. Colors
+            2.1 Solid
+                2.1.1 Maps
+                2.1.2 Mixins ( Flow Control )
+                    a.1 Background
+                    b.1 Text
+                    c.1 Border
+    B. Functions & Loops
+    C. 
+
+*/ 
+
+// Typeface
+
+    $headfont :'Source Sans Pro', sans-serif; 
+    $bodyfont : 'Open Sans', sans-serif;
+
+// Colors
+$peri: #E1914E;
+$yelo: #ffb13b;
+$teal: #0069ab;
+$turquoise: #5CA4CC;
+$slate-gray: #354858;
+$dim-gray: #765449;
+$steel-blue:#C1D5E2;
+$gray:#A29FA3;
+$dusty-white:#E2E2E2;
+$white: #FEFEFE;
+
+
+    // 2.1.1 Mapping
+    $solid: () !default;
+    $solid: map-merge(
+      (
+        peri: #E1914E,
+        yelo: #ffb13b,
+        teal: #0069ab,
+        turquoise: #5CA4CC,
+        slate-gray: #354858,
+        dim-gray: #765449,
+        steel-blue:#C1D5E2,
+        gray:#A29FA3,
+        dusty-white:#E2E2E2,
+        white: #FEFEFE,
+      ),
+      $solid
+    );
+
+    // 2.1.2 Mixins
+        // a.1 Background
+        @mixin bg-solid($parent, $solid) {
+            #{$parent} {
+              background: $solid;
+            }
+        }
+
+            // Creating Class
+            @each $solid, $value in $solid {
+                @include bg-solid(".bg-#{$solid}", $value);
+            } // This makes the class "bg-{color name}" 
+
+        
+        // b.1 Text
+        @mixin text-solid($parent, $solid) {
+            #{$parent} {
+              color: $solid;
+            }
+        }
+            // Creating Class
+            @each $solid, $value in $solid {
+                @include text-solid(".text-#{$solid}", $value);
+            } // This makes the class "text-{color name}"
+
+
+        // c.1 Border
+        @mixin outline-solid($parent, $solid) {
+            #{$parent} {
+              border: solid 1.2px $solid !important;
+              border-radius: 0.25rem;
+              background: transparent;
+              line-height: 1.5;
+              cursor: pointer;
+            }
+        }
+            // Creating Class
+            @each $solid, $value in $solid {
+                @include outline-solid(".outline-#{$solid}", $value);
+            } // This makes the class "outline-{color name}"
