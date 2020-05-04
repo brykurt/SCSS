@@ -37,19 +37,19 @@
   @include angular-material-theme($copywork-app-theme);
 
 @font-face {
-    font-family:"Open Sans", sans-serif;
-    font-family:"Source Sans Pro", sans-serif;
-    src: url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Source+Sans+Pro&display=swap');
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Lato', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins&display=swap');
   }
 
 
 html, body { 
     height: 100vh; 
     overflow: hidden;
-    background:#C1D5E2 !important;
+    background: white !important;
     // Typeface/Fonts
-    .headfont   { font-family: "Source Sans Pro", sans-serif; }
-    .bodytext   { font-family: "Open Sans", sans-serif; } }
+    .headfont   { font-family: 'Poppins', sans-serif; }
+    .bodytext   { font-family: 'Lato', sans-serif;} }
 
 html { margin: 1%}
 body { margin: 0; border-radius: 25px;}

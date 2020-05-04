@@ -21,81 +21,79 @@
     B. Functions & Loops
     C. 
 
-*/ 
+*/
 
 // Typeface
 
-    $headfont :'Source Sans Pro', sans-serif; 
-    $bodyfont : 'Open Sans', sans-serif;
+$headfont: "Poppins", sans-serif;
+$bodyfont: "Lato", sans-serif;
 
 // Colors
-$peri: #E1914E;
-$yelo: #ffb13b;
-$teal: #0069ab;
-$turquoise: #5CA4CC;
-$slate-gray: #354858;
-$dim-gray: #765449;
-$steel-blue:#C1D5E2;
-$gray:#A29FA3;
-$dusty-white:#E2E2E2;
-$white: #FEFEFE;
+$green: #009e0f;
+$gray1: #333333;
+$black: #000000;
+$white: #fefefe;
+$gray4: #cccccc;
+$border: solid;
 
+// 2.1.1 Mapping
+$solid: () !default;
+$solid: map-merge(
+  (
+    green: #009e0f,
+    gray1: #333333,
+    black: #000000,
+    white: #fefefe,
+    gray4: #cccccc,
+    solid: solid,
+  ),
+  $solid
+);
 
-    // 2.1.1 Mapping
-    $solid: () !default;
-    $solid: map-merge(
-      (
-        peri: #E1914E,
-        yelo: #ffb13b,
-        teal: #0069ab,
-        turquoise: #5CA4CC,
-        slate-gray: #354858,
-        dim-gray: #765449,
-        steel-blue:#C1D5E2,
-        gray:#A29FA3,
-        dusty-white:#E2E2E2,
-        white: #FEFEFE,
-      ),
-      $solid
-    );
+// 2.1.2 Mixins
+// a.1 Background
+@mixin bg-solid($parent, $solid) {
+  #{$parent} {
+    background: $solid;
+  }
+}
 
-    // 2.1.2 Mixins
-        // a.1 Background
-        @mixin bg-solid($parent, $solid) {
-            #{$parent} {
-              background: $solid;
-            }
-        }
+// Creating Class
+@each $solid, $value in $solid {
+  @include bg-solid(".bg-#{$solid}", $value);
+} // This makes the class "bg-{color name}"
 
-            // Creating Class
-            @each $solid, $value in $solid {
-                @include bg-solid(".bg-#{$solid}", $value);
-            } // This makes the class "bg-{color name}" 
+// b.1 Text
+@mixin text-solid($parent, $solid) {
+  #{$parent} {
+    color: $solid;
+  }
+}
+// Creating Class
+@each $solid, $value in $solid {
+  @include text-solid(".text-#{$solid}", $value);
+} // This makes the class "text-{color name}"
 
-        
-        // b.1 Text
-        @mixin text-solid($parent, $solid) {
-            #{$parent} {
-              color: $solid;
-            }
-        }
-            // Creating Class
-            @each $solid, $value in $solid {
-                @include text-solid(".text-#{$solid}", $value);
-            } // This makes the class "text-{color name}"
+// c.1 Border
+@mixin outline-solid($parent, $solid) {
+  #{$parent} {
+    border: solid 1.2px $solid !important;
+    border-radius: 0.25rem;
+    background: transparent;
+    line-height: 1.5;
+    cursor: pointer;
+  }
+}
+// Creating Class
+@each $solid, $value in $solid {
+  @include outline-solid(".outline-#{$solid}", $value);
+} // This makes the class "outline-{color name}"
 
-
-        // c.1 Border
-        @mixin outline-solid($parent, $solid) {
-            #{$parent} {
-              border: solid 1.2px $solid !important;
-              border-radius: 0.25rem;
-              background: transparent;
-              line-height: 1.5;
-              cursor: pointer;
-            }
-        }
-            // Creating Class
-            @each $solid, $value in $solid {
-                @include outline-solid(".outline-#{$solid}", $value);
-            } // This makes the class "outline-{color name}"
+@mixin border-solid($parent, $solid) {
+  #{$parent} {
+    color: $solid;
+  }
+}
+@each $solid, $value in $solid {
+  @include border-solid(".bc-#{$solid}", $value);
+}

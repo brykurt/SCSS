@@ -1,194 +1,106 @@
-<div class="container bg-steel-blue"></div>
-<div class="bg-white">
+<div class="bg-gray1 p-b-40">
+  <!-- 1st Column-->
+  <div fxLayout="column" fxLayoutAlign="center center" class="text-white">
+    <h3>Possible Colors</h3>
+  </div>
+  <!-- //1st Column -->
 
-<!--1st Row-->
-<div fxLayout="row" fxLayoutAlign="space-between center">
-  <div fxFlex class="">
-    <!-- Colors-->
-    <div fxLayout="row"> 
-      <div fxFlex="14">
-        <div class="p-10 bg-teal">&nbsp;</div>
-      </div>
-      <div fxFlex="14">
-        <div class="p-10 bg-turquoise">&nbsp;</div>
-      </div>
-      <div fxFlex="14">
-        <div class="p-10 bg-peri">&nbsp;</div>
-      </div>
-      <div fxFlex="14">
-        <div class="p-10 bg-yelo">&nbsp;</div>
-      </div>
-      <div fxFlex="14">
-        <div class="p-10 bg-slate-gray">&nbsp;</div>
-      </div>
-      <div fxFlex="14">
-        <div class="p-10 bg-white">&nbsp;</div>
-      </div>
-      <div fxFlex="14">
-        <div class="p-10 bg-gray">&nbsp;</div>
-      </div>
+  <!-- 1st Row -->
+  <div fxLayout="row" fxLayoutAlign="space-around start" class="m-l-20">
+    <div class="border">
+      <div fxFlex="15" class="p-50 bg-black"></div>
     </div>
 
-    <!-- Fonts-->
-    <div fxLayout="row" class="p-t-20 p-b-30 font-medium text-center text-slate-gray">
-      <div fxFlex="33">
-        <div class="fs24">
-          <h1>Fresh</h1>
-        </div>
-      </div>
-      <div fxFlex="33">
-        <div class="fs24">
-          <h1>Bold</h1>
-        </div>
-      </div>
-      <div fxFlex="33">
-        <div class="fs24 ">
-          <h1>Lively</h1>
-        </div>
-      </div>
+    <div class="border">
+      <div fxFlex="15" class="p-50 bg-gray1"></div>
+    </div>
+
+    <div class="border">
+      <div fxFlex="15" class="p-50 bg-green"></div>
+    </div>
+
+    <div class="border">
+      <div fxFlex="15" class="p-50 bg-gray4"></div>
+    </div>
+
+    <div class="border">
+      <div fxFlex="15" class="p-50 bg-white"></div>
     </div>
   </div>
-  <div fxFlex="25">
-    <div fxLayout="row"  class="p-l-50 p-r-50 text-left text-slate-gray ">
-      <div class="fs14 font-bold bodytext">
-        BALANCE
-        <p class="font-medium">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu
-        </p>
-      </div>
+
+  <!-- //1st Row -->
+
+  <!-- 2nd Row-->
+  <div
+    fxLayout="column"
+    fxLayoutAlign="center center"
+    class="text-white m-t-50"
+  >
+    <h3>Button Colors</h3>
+  </div>
+ 
+  <div fxLayout="row" fxLayoutAlign="space-around center" class="m-t-50">
+    <button
+      mat-button
+      class="btn btn-block bg-black text-white font-medium fs12 w10 h10"
+    >
+      Black
+    </button>
+
+    <button
+      mat-button
+      class="btn btn-block bg-gray1 text-white font-medium fs12 w10 h10"
+      style="border-color: white;"
+    >
+      Gray 1
+    </button>
+    <button
+      mat-button
+      class="btn btn-block bg-green text-white font-medium fs12 w10 h10"
+    >
+      Green
+    </button>
+
+    <button
+      mat-button
+      class="btn btn-block bg-gray4 text-black font-medium fs12 w10 h10"
+    >
+      Gray 4
+    </button>
+
+    <button
+      mat-button
+      class="btn btn-block bg-white text-black font-medium fs12 w10 h10"
+    >
+      White
+    </button>
+  </div>
+ <!-- //2nd Row-->
+
+  <!-- 3rd Row-->
+  <div fxLayout="row" fxLayoutAlign="space-around center" class="m-t-50">
+    <div fxFlex="30" class="text-white">
+      <h2>This is an example header (Poppins)</h2>
+      <p class="fs20">
+        <b> (Lato)</b>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit
+        posuere neque, vitae ultricies risus tempus a. Suspendisse potenti.
+        Mauris vel quam vitae turpis cursus luctus at ac purus.
+      </p>
+    </div>
+    <div fxFlex="25" class="text-white">
+      <h3>This is an example of a sub head (Poppins)</h3>
+      <p class="fs16">
+        <b> (Lato)</b>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit
+        posuere neque, vitae ultricies risus tempus a. Suspendisse potenti.
+        Mauris vel quam vitae turpis cursus luctus at ac purus.
+      </p>
     </div>
   </div>
-  <div fxFlex="33">
-    <div fxLayout="row">
-      <div fxFlex="25">
-        <i class="las la-book-open fs64 text-gray m-auto"></i>
-      </div>
-      <div fxFlex="25">
-        <i class="las la-cross fs64 text-gray m-auto"></i>
-      </div>
-      <div fxFlex="25">
-        <i class="las la-shower fs64 text-gray m-auto"></i>
-      </div>
-      <div fxFlex="25">
-        <i class="las la-hand-holding-heart fs64 text-gray m-auto"></i>
-      </div>
-    </div>
+
+  <div fxLayout="column" fxLayoutAlign="center center" class="text-white">
+    <p class="fs16">Style tiles by: Bryon Kurt S. Segunto</p>
   </div>
-</div>
-<!-- //1st Row -->
-
-<!--2nd Row-->
-<div fxLayout="row"  fxLayoutAlign="space-around stretch">
-  <div fxFlex>
-    <!-- Row -->
-    <div fxLayout="row">
-      <div fxFlex="30" class="m-t-50 button-colmun">
-        <div fxLayout="column">
-          <button mat-button class="btn btn-block bg-yelo text-slate-gray font-medium fs12">Sponsor</button>
-          <button mat-button class="btn btn-block bg-teal text-white font-medium fs12 m-t-15">Donate</button>
-          <button mat-button class="btn btn-block bg-peri text-white font-medium fs12 m-t-15">Learn More</button>
-          <button mat-button class="btn btn-block outline-slate-gray text-slate-gray font-medium fs12 m-t-15">Button</button>
-        </div>
-
-        <div fxlayout="column" class="m-t-15 fs12"> 
-          <mat-button-toggle-group name="fontStyle" aria-label="Font Style" class="w100-" fxLayoutAlign="end center">
-            <mat-button-toggle value="bold">$100</mat-button-toggle>
-            <mat-button-toggle value="italic">$150</mat-button-toggle>
-            <mat-button-toggle value="underline">$_ _ _ _</mat-button-toggle>
-          </mat-button-toggle-group>
-        </div>
-
-        <div fxlayout="column" class="m-t-15 fs12">
-
-            <mat-form-field class="outline-dusty-white p-5 w100" fxLayoutAlign="end center">
-              <mat-label>Select Dropdown</mat-label>
-              <mat-select>
-                <mat-option value="option">Option</mat-option>
-              </mat-select>
-            </mat-form-field>
-        </div>
-      </div>
-
-      <div fxFlex="33" class="bg-steel-blue">
-        <div fxLayout="row" class="p-50">
-          <mat-card class="text-slate-gray">
-            <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-            <mat-card-content>
-              <div fxlayout="row" class="text-peri">
-                <a href="#" class="tags">Ethiopia</a>&nbsp;|&nbsp;<a href="#" class="tags">Education</a>
-              </div>
-              <h3 class="m-t-10">A Little Girl with Bold Dreams</h3>
-            </mat-card-content>
-            <mat-card-actions>
-              <button mat-button class="btn btn-block outline-slate-gray text-slate-gray font-medium fs12 w100">Read More</button>
-            </mat-card-actions>
-          </mat-card>
-        </div>
-      </div>
-
-      <div fxFlex class="bg-peri" fxLayoutAlign="center center">
-        <div class="h100 p-50">
-          <div class="sub-headline text-white block">
-            Sub Headline Example
-          </div>
-          <div class="headliner text-white block">
-            Headline Example
-          </div>
-          <div class="text-white block">
-            <p>
-              Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-            <p>
-              It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.
-            </p>
-          </div>
-          <div class="block m-t-15">
-            <a href="#" class="link">This is a link</a>
-          </div>
-        </div>
-      </div> 
-    </div>
-     
-    <!-- Row -->
-    <div fxLayout="row" class="bg-slate-gray p-t-30 p-b-30 p-l-50 p-r-50">
-      <div fxFlex>
-        <div fxLayout="row" class="checkbox text-white fs10">
-          <mat-checkbox>Monthly &nbsp;</mat-checkbox>
-          <mat-checkbox>One-Time</mat-checkbox>
-        </div>
-        <div fxLayout="row" class="text-white fs10">
-          <mat-form-field appearance="fill">
-            <mat-label>Input</mat-label>
-            <input matInput placeholder="Additional donation info (optional)">
-          </mat-form-field>&nbsp;
-          <mat-form-field appearance="fill">
-            <mat-label>Input</mat-label>
-            <input matInput placeholder="Active Form">
-          </mat-form-field>&nbsp;
-          <mat-form-field appearance="fill">
-            <mat-label>Input</mat-label>
-            <input matInput placeholder="Last Name">
-          </mat-form-field>
-        </div>
-      </div>
-      <div fxFlex="30">
-        <div fxLayout="row">
-          <div fxFlex="30">
-            <i class="las la-cross fs64 text-yelo m-auto"></i>
-          </div>
-
-          <div fxFlex class=" text-white text-center">
-            <h1 class="m-0 font-medium">$5,608</h1>
-            <div class="sub-headline">GOAL $15,000</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-
-  <div fxFlex="33" class="bg-dusty-white">
-    <img src="../assets/images/portrait.jpg" width="100%"/>
-  </div>
-</div>
-<!-- //2nd Row -->
+   <!-- //3rd Row-->
 </div>
